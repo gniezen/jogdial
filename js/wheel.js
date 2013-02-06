@@ -26,6 +26,8 @@ var el = document.body.getElementsByTagName("svg")[0];
 
 angle = 90;
 
+var connection = new WebSocket('ws://137.44.6.225:9000/');
+
 var move = function(dx, dy) {
   var oldAngle = angle;
 
@@ -48,10 +50,17 @@ var move = function(dx, dy) {
   if(Math.abs(scrollAmount) > 100) { return; }
 
   console.log(scrollAmount);
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("GET", "/?" + scrollAmount, true);
-  xmlhttp.send();
+  //var xmlhttp = new XMLHttpRequest();
+  //xmlhttp.open("GET", "/?" + scrollAmount, true);
+  //xmlhttp.send();
+   
+  connection.send(scrollAmount);
+  //var socket = io.connect('ws://137.44.6.225:9000/');
+  //socket.emit('scrolling', { my: 'scrollAmount' });
+  //});
 };
+
+
 
 var up = function() {};
 var start = function(dx, dy) {

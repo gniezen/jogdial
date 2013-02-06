@@ -1,18 +1,18 @@
 JogDial
 =======
-by Michael Nutt <michael@nuttnet.net>
+Original MacRuby/ControlTower version by by Michael Nutt <michael@nuttnet.net>
+Modified to use Websockets by Gerrit Niezen <g.niezen@swansea.ac.uk>
 
-Because you always wanted to use your ipad as a scrolling device for your computer.  Using javascript.  Over HTTP.  Over wifi.
+
 
 Requirements
 ------------
 1. iPad / iPhone / another computer
-2. [macruby](http://macruby.org)
-3. [ControlTower gem](http://github.com/MacRuby/ControlTower)
+2. A WebSocket server
 
 Usage
 -----
-1. control_tower -p 4567
+1. python -m SimpleHTTPServer 4567
 2. On the ipad/iphone/other computer, navigate to http://[your ip]:4567/index.html
 3. Drag
 4. Enjoy.
