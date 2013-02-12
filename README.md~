@@ -9,7 +9,6 @@ Requirements
 1. iPad / iPhone / another computer
 2. tornado (to install: pip install tornado)
 3. pygame (to install: pip install pygame)
-
 Usage
 -----
 1. python wsserver.py
